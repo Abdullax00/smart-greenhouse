@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Умная теплица — Технологии на службе у живой природы</title>
+  <meta name="description" content="Инновационный проект «Умная теплица»: автономный микроклимат, инженерный CAD-каркас, фотореалистичные рендеры и интерактивная 3D-модель.">
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet (Matching Frame 7.svg from Figma) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2380FF00'><path d='M12 2a9 9 0 0 1 9 9v1a9 9 0 0 1-9 9 9 9 0 0 1-9-9V11a9 9 0 0 1 9-9Z'/><path d='M12 7v10'/></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header Navigation (Figma: Bar x=8, y=0, h=92, fill=black 0.2)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="header-brand" aria-label="Умная теплица">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2a9 9 0 0 1 9 9v1a9 9 0 0 1-9 9 9 9 0 0 1-9-9V11a9 9 0 0 1 9-9Z"/>
+            <path d="M12 7v10"/>
+          </svg>
+        </div>
+        <span>Умная теплица</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Главная</a></li>
+        <li><a href="#gallery" class="nav-link">Галерея</a></li>
+        <li><a href="#3dmodel" class="nav-link">3D Модель</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section (Figma: y=0 to 1423, paint0_linear_24_2 black to #A2FFA5)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-glow-blob"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Умная теплица</h1>
+        <a href="#intro" class="hero-cta-btn" id="heroCtaBtn">Посмотреть</a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Intro Slogan (Figma: y=1423 to 2314, bg=#BFE6D9)
+         ========================================================================== -->
+    <section class="intro-section" id="intro">
+      <h2 class="intro-title">Технологии на службе у живой природы</h2>
+    </section>
+
+    <!-- ==========================================================================
+         Main Showcase Card Container (Figma: y=2314 to 7569, rx=99, paint2_linear_24_2)
+         ========================================================================== -->
+    <section class="main-showcase-container" id="gallery">
+      <div class="main-green-card">
+
+        <!-- 1. Video Overview Sub-section ("Галерея" / "Обзор моей работы") -->
+        <div class="video-showcase">
+          <h2 class="section-headline">Галерея</h2>
+
+          <div class="video-player-wrapper">
+            <div class="video-header-overlay">
+              <span class="video-header-title">Обзор моей работы</span>
+            </div>
+
+            <!-- Video with local footage and fallback poster -->
+            <video
+              class="main-video"
+              preload="metadata"
+              poster="Отрендеренные фото/Camera_angle_zooming_out_wide_20261005110217.jpg"
+              playsinline>
+              <source src="Видео Обзор/Camera_orbiting_modern_glass_gre…_20261005104149.mp4" type="video/mp4">
+              Ваш браузер не поддерживает встроенное видео.
+            </video>
+
+            <!-- Big center play button -->
+            <button class="video-big-play" aria-label="Воспроизвести видео">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+
+            <!-- Bottom custom player controls -->
+            <div class="video-controls-bar">
+              <button class="v-control-btn btn-play" aria-label="Воспроизведение/Пауза">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+
+              <div class="video-progress-container" aria-label="Шкала времени">
+                <div class="video-progress-bar"></div>
+              </div>
+
+              <span class="video-time">00:00 / 00:00</span>
+
+              <button class="v-control-btn btn-mute" aria-label="Звук">
+                <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </button>
+
+              <button class="v-control-btn btn-fullscreen" aria-label="Полный экран">
+                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <h3 class="sub-slogan-text">Идеальный климат там, где рождается будущее</h3>
+        </div>
+
+        <!-- 2. Rendered Photos Sub-section ("Отрендеренные фото") -->
+        <div class="translucent-block" id="renders">
+          <h2 class="section-headline">Отрендеренные фото</h2>
+
+          <div class="carousel-outer">
+            <!-- Navigation arrows with Figma chevron styling -->
+            <button class="carousel-nav-btn prev-btn" aria-label="Предыдущее фото">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="carousel-nav-btn next-btn" aria-label="Следующее фото">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+
+            <!-- 3D Coverflow stage -->
+            <div class="carousel-stage">
+              <div class="carousel-card" data-index="0">
+                <img src="Отрендеренные фото/image.png_20261005104118.jpg" alt="Вечерняя умная оранжерея с теплой подсветкой" loading="lazy">
+                <div class="card-caption">Вечерняя оранжерея с мягкой подсветкой</div>
+              </div>
+              <div class="carousel-card" data-index="1">
+                <img src="Отрендеренные фото/Side_profile_opt.jpg" data-full="Отрендеренные фото/Side_profile_view_of_subject_2K_20261005110218.jpg" alt="Боковой ракурс конструкции умной теплицы 2K" loading="lazy">
+                <div class="card-caption">Боковой профиль конструкции 2K</div>
+              </div>
+              <div class="carousel-card" data-index="2">
+                <img src="Отрендеренные фото/image.png_20261005104334.jpg" alt="Закатный ракурс оранжереи" loading="lazy">
+                <div class="card-caption">Закатное освещение и теплый микроклимат</div>
+              </div>
+              <div class="carousel-card" data-index="3">
+                <img src="Отрендеренные фото/Macro_photography_of_subject_detail_20261005110223.jpg" alt="Макрофотография стеллажей и культур" loading="lazy">
+                <div class="card-caption">Внутренние стеллажи и многоуровневая гидропоника</div>
+              </div>
+              <div class="carousel-card" data-index="4">
+                <img src="Отрендеренные фото/Camera_angle_zooming_out_wide_20261005110217.jpg" alt="Широкий план теплицы в парковом ландшафте" loading="lazy">
+                <div class="card-caption">Широкий ракурс и ландшафтная интеграция</div>
+              </div>
+              <div class="carousel-card" data-index="5">
+                <img src="Отрендеренные фото/Camera_panning_left_to_reveal_20261005110230.jpg" alt="Фронтальный вид фасада оранжереи" loading="lazy">
+                <div class="card-caption">Фронтальный фасад с термоизолированным стеклом</div>
+              </div>
+              <div class="carousel-card" data-index="6">
+                <img src="Отрендеренные фото/Camera_panning_up_to_reveal_20261005110218.jpg" alt="Панорамный вид с открытыми вентиляционными форточками" loading="lazy">
+                <div class="card-caption">Система автоматического проветривания</div>
+              </div>
+            </div>
+
+            <!-- Dots Pagination -->
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+
+        <!-- 3. Raw Photos Sub-section ("Сырые фото" / CAD Drawings) -->
+        <div class="translucent-block" id="blueprints">
+          <h3 class="sub-slogan-text" style="margin-top: 0; margin-bottom: clamp(30px, 4vw, 60px);">
+            Эволюция идеи: от каркаса к идеальной среде.
+          </h3>
+          <h2 class="section-headline">Сырые фото</h2>
+
+          <div class="carousel-outer">
+            <button class="carousel-nav-btn prev-btn" aria-label="Предыдущий чертеж">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="carousel-nav-btn next-btn" aria-label="Следующий чертеж">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+
+            <!-- 3D Coverflow for CAD Blueprints -->
+            <div class="carousel-stage">
+              <div class="carousel-card" data-index="0">
+                <img src="Сырые фото/Мой первый 3Д.jpg" alt="CAD архитектурный каркас — фронтальная проекция" loading="lazy">
+                <div class="card-caption">CAD Каркас: несущая металлоконструкция и входная группа</div>
+              </div>
+              <div class="carousel-card" data-index="1">
+                <img src="Сырые фото/Мой первый 3Д.2 jpg.jpg" alt="3D Wireframe пространственная модель оранжереи" loading="lazy">
+                <div class="card-caption">Wireframe 3D: пространственная геометрия ферм и стропил</div>
+              </div>
+            </div>
+
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: 3D Модель (Figma: y=7497 to 9659, bg=#D9D9D9, viewer rx=56)
+         ========================================================================== -->
+    <section class="model-section" id="3dmodel">
+      <div class="model-container">
+        <h2 class="model-title">3D Модель</h2>
+
+        <div class="model-card">
+          <!-- WebGL Three.js Container -->
+          <div id="canvas-3d-container"></div>
+
+          <!-- Base 3D CAD Preview backdrop matching Frame 7.svg -->
+          <img id="model3dFallback" class="model-fallback-img" src="Сырые фото/Мой первый 3Д.jpg" alt="3D Модель теплицы">
+
+          <!-- Loading overlay -->
+          <div class="model-loader hidden" id="modelLoader">
+            <div class="spinner"></div>
+            <div class="loader-text">Инициализация 3D среды...</div>
+          </div>
+
+          <!-- Top-Right Action Toolbar -->
+          <div class="model-toolbar">
+            <button class="model-tool-btn active" id="btnAutoSpin" title="Вкл/Выкл авто-вращение">
+              <svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+              <span>Вращение</span>
+            </button>
+            <button class="model-tool-btn" id="btnWireframe" title="Режим каркаса (Wireframe)">
+              <svg viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9zM12 4.15L6.04 7.5 12 10.85l5.96-3.35L12 4.15zM5 8.91v6.23l6 3.38V12.3L5 8.91zm14 0l-6 3.39v6.22l6-3.38V8.91z"/></svg>
+              <span>Каркас</span>
+            </button>
+            <button class="model-tool-btn" id="btnResetView" title="Сбросить ракурс">
+              <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+              <span>Сброс</span>
+            </button>
+            <button class="model-tool-btn" id="btnFullscreen3d" title="Полный экран">
+              <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+            </button>
+          </div>
+
+          <!-- Bottom-Left Mouse Controls Hint (Figma SVG vectors) -->
+          <div class="model-controls-hint">
+            <div class="control-hint-pill">
+              <div class="mouse-icon left-active"></div>
+              <span>Вращение 360° (Зажать ЛКМ)</span>
+            </div>
+            <div class="control-hint-pill">
+              <div class="mouse-icon right-active"></div>
+              <span>Панорама и Зум (ПКМ / Колёсико)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Full-Screen Lightbox Modal
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" aria-label="Закрыть просмотр">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="lightbox-content">
+      <img class="lightbox-img" src="" alt="Детальный просмотр">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">Умная теплица</div>
+      <div class="footer-copy">© 2026 Проект «Умная теплица» — Технологии на службе у живой природы</div>
+      <a href="#hero" class="back-to-top-btn">
+        <span>Наверх</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Three.js and Loaders (via CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/viewer3d.js"></script>
+
+</body>
+</html>
